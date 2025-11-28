@@ -42,8 +42,8 @@ def test_ensure_not_empty_empty_string():
         ensure_not_empty("", "test_field")
 
 
-def test_ensure_not_empty_none_like():
-    """Test ensure_not_empty with empty string."""
+def test_ensure_not_empty_with_different_field_name():
+    """Test ensure_not_empty shows correct field name in error message."""
     with pytest.raises(ValueError, match="field_name must not be empty"):
         ensure_not_empty("", "field_name")
 
